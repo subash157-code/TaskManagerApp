@@ -1,0 +1,315 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Toggle */
+.dark-mode {
+    background-color: #1a1a2e;
+    color: #f0f2f5;
+}
+
+.dark-mode .sidebar {
+    background-color: #1f283e;
+}
+
+.dark-mode .sidebar-title,
+.dark-mode .nav-links li {
+    color: #fff;
+}
+
+.dark-mode .nav-links li.active {
+    background-color: #2b3a5b;
+}
+
+.dark-mode .main-content {
+    background-color: #2a334d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .form-title,
+.dark-mode .table-title {
+    color: #fff;
+}
+
+.dark-mode .employee-form,
+.dark-mode .task-form {
+    background-color: #1f283e;
+    border: 1px solid #3c4866;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea,
+.dark-mode .form-group select {
+    background-color: #313a52;
+    color: #fff;
+    border: 1px solid #4a546e;
+}
+
+.dark-mode .data-table,
+.dark-mode .task-table {
+    background-color: #1f283e;
+    border: 1px solid #3c4866;
+}
+
+.dark-mode .data-table th,
+.dark-mode .data-table td,
+.dark-mode .task-table th,
+.dark-mode .task-table td {
+    border-bottom: 1px solid #3c4866;
+    color: #fff;
+}
+
+/* Dashboard Layout */
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.theme-switcher {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    color: #555;
+}
+
+.nav-links li:hover {
+    background-color: #e2e6ea;
+}
+
+.nav-links li.active {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+/* Forms */
+.employee-form, .team-lead-form, .task-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Tables */
+.table-view-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.data-table, .task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td,
+.task-table th, .task-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th, .task-table th {
+    background-color: #f8f9fa;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.data-table tr:hover, .task-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.data-table td .edit-btn, .data-table td .delete-btn,
+.task-table td .edit-btn, .task-table td .delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.bulk-delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.bulk-delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Other CSS rules... */
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    transition: width 0.4s ease-in-out;
+}
+
+.progress-bar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 0.8em;
+    font-weight: bold;
+}
