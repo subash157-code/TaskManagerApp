@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Employee.css"; // Import modern CSS
 
 // Base URL for the backend API
-const apiBase = "http://localhost:5000/api";
+const apiBase = "https://taskmanagerapp-backend-9tdi.onrender.com/api";
 
 // Helper function to map task status to a progress percentage
 const statusToProgress = (status) => {
