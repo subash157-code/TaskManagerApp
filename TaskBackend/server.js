@@ -58,6 +58,12 @@ const Task = mongoose.model('Task', taskSchema);
 
 // Employees
 // GET all employees
+
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 app.get('/api/employees', async (req, res) => {
     try {
         const { role } = req.query;
