@@ -313,3 +313,89 @@ body {
     font-size: 0.8em;
     font-weight: bold;
 }
+
+
+
+@media (max-width: 767px) {
+    /* Main Layout */
+    .admin-dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .sidebar-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    /* Forms */
+    .employee-form, .team-lead-form, .task-form {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Tables */
+    .table-view-container {
+        padding: 10px;
+        overflow-x: auto; /* Enables horizontal scrolling for tables */
+    }
+
+    .data-table, .task-table {
+        min-width: 600px; /* Prevents table content from wrapping */
+    }
+
+    .data-table th, .data-table td,
+    .task-table th, .task-table td {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .data-table td .edit-btn, .data-table td .delete-btn,
+    .task-table td .edit-btn, .task-table td .delete-btn {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Main Layout */
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    /* Forms */
+    .employee-form, .team-lead-form, .task-form {
+        padding: 20px;
+    }
+}
