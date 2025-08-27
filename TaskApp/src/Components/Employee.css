@@ -150,3 +150,93 @@
   font-size: 18px;
   color: #555;
 }
+/* Base styles (your existing CSS remains) */
+/* ... existing code above ... */
+
+/* 🔹 Small Mobiles (max 480px) */
+@media (max-width: 480px) {
+  .employee-wrap {
+    padding: 15px;
+  }
+
+  .card, .header, .task-item {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .input-field {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .dashboard {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* 🔹 Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .employee-wrap {
+    padding: 20px;
+  }
+
+  .dashboard {
+    width: 95%;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .task-list {
+    gap: 15px;
+  }
+}
+
+/* 🔹 Laptops (769px – 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .dashboard {
+    width: 90%;
+  }
+
+  .header {
+    padding: 18px 20px;
+  }
+
+  .task-item {
+    padding: 18px;
+  }
+}
+
+/* 🔹 Large Screens / PC (1201px and above) */
+@media (min-width: 1201px) {
+  .dashboard {
+    max-width: 1200px;
+  }
+
+  .header {
+    padding: 25px 30px;
+  }
+
+  .task-item {
+    padding: 25px;
+  }
+}
+
