@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const path = require("path");
+
 
 const app = express();
 const PORT = 5000;
@@ -60,11 +60,6 @@ const Task = mongoose.model('Task', taskSchema);
 // Employees
 // GET all employees
 
-app.use(express.static(path.join(__dirname, "client/build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
-});
 app.get('/api/employees', async (req, res) => {
     try {
         const { role } = req.query;
