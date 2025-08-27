@@ -19,7 +19,7 @@ const statusToProgress = (status) => {
 };
 
 export default function App() {
-  const apiBase = "http://localhost:5000/api";
+  const apiBase = "https://taskmanagerapp-backend-9tdi.onrender.com/api";
 
   const [teamLeads, setTeamLeads] = useState([]);
   const [employees, setEmployees] = useState([]);
