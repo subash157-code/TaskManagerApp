@@ -396,3 +396,108 @@
           text-align: center;
           margin-bottom: 2rem;
         }
+
+        /* 🔹 Mobile (max 480px) */
+@media (max-width: 480px) {
+  .tl-wrap {
+    padding: 1rem;
+  }
+
+  .login-panel {
+    padding: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  .login-panel h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .section-card {
+    padding: 1rem;
+  }
+
+  .modal-card {
+    padding: 1.5rem;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+}
+
+/* 🔹 Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .tl-wrap {
+    padding: 1.5rem;
+  }
+
+  .login-panel {
+    padding: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .section-card {
+    padding: 1.25rem;
+  }
+}
+
+/* 🔹 Laptops (769px – 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header h1 {
+    font-size: 2.25rem;
+  }
+
+  .main-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* 🔹 Large screens / Desktops (1201px and above) */
+@media (min-width: 1201px) {
+  .dashboard {
+    max-width: 1580px;
+    padding: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-heading {
+    font-size: 3rem;
+  }
+}
