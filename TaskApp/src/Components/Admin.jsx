@@ -59,7 +59,7 @@ const Admin = () => {
     // API Calls
     const fetchEmployees = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/employees');
+            const response = await axios.get('https://taskmanagerapp-backend-9tdi.onrender.com/api/employees');
             setEmployees(response.data);
             processEmployeeData(response.data);
         } catch (error) {
@@ -69,7 +69,7 @@ const Admin = () => {
 
     const fetchTeamLeads = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/teamleads');
+            const response = await axios.get('https://taskmanagerapp-backend-9tdi.onrender.com/api/teamleads');
             setTeamLeads(response.data);
         } catch (error) {
             console.error('Error fetching team leads:', error);
@@ -78,7 +78,7 @@ const Admin = () => {
 
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/tasks');
+            const response = await axios.get('https://taskmanagerapp-backend-9tdi.onrender.com/api/tasks');
             setTasks(response.data);
             updateTaskChartData(response.data);
         } catch (error) {
@@ -128,7 +128,7 @@ const Admin = () => {
         e.preventDefault();
         try {
             const data = { ...employee, role: 'Employee', experience: null, salary: null };
-            await axios.post('http://localhost:5000/api/employees', data);
+            await axios.post('https://taskmanagerapp-backend-9tdi.onrender.com/api/employees', data);
             alert('Employee added successfully!');
             setEmployee({ id: '', name: '', role: 'Employee', team: '', mobile: '', email: '', address: '' });
             fetchEmployees();
@@ -142,7 +142,7 @@ const Admin = () => {
     const handleUpdateEmployee = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/employees/${editingEmployeeId}`, employee);
+            await axios.put(`https://taskmanagerapp-backend-9tdi.onrender.com/api/employees/${editingEmployeeId}`, employee);
             alert('Employee updated successfully!');
             setEditingEmployeeId(null);
             setEmployee({ id: '', name: '', role: 'Employee', team: '', mobile: '', email: '', address: '' });
@@ -156,7 +156,7 @@ const Admin = () => {
 
     const handleDeleteEmployee = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/employees/${id}`);
+            await axios.delete(`https://taskmanagerapp-backend-9tdi.onrender.com/api/employees/${id}`);
             alert('Employee deleted successfully!');
             fetchEmployees();
         } catch (error) {
@@ -168,7 +168,7 @@ const Admin = () => {
     const handleBulkDeleteEmployees = async () => {
         if (selectedEmployees.length === 0) return;
         try {
-            await axios.delete('http://localhost:5000/api/employees', { data: { employeeIds: selectedEmployees } });
+            await axios.delete('https://taskmanagerapp-backend-9tdi.onrender.com/api/employees', { data: { employeeIds: selectedEmployees } });
             alert('Selected employees deleted successfully!');
             setSelectedEmployees([]);
             fetchEmployees();
@@ -183,7 +183,7 @@ const Admin = () => {
         e.preventDefault();
         try {
             const data = { ...teamLead, role: 'Team Lead' };
-            await axios.post('http://localhost:5000/api/teamleads', data);
+            await axios.post('https://taskmanagerapp-backend-9tdi.onrender.com/api/teamleads', data);
             alert('Team Lead added successfully!');
             setTeamLead({ id: '', name: '', role: 'Team Lead', team: '', experience: 0, salary: 0, mobile: '', email: '', address: '' });
             fetchTeamLeads();
@@ -197,7 +197,7 @@ const Admin = () => {
     const handleUpdateTeamLead = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/teamleads/${editingTeamLeadId}`, teamLead);
+            await axios.put(`https://taskmanagerapp-backend-9tdi.onrender.com/api/teamleads/${editingTeamLeadId}`, teamLead);
             alert('Team Lead updated successfully!');
             setEditingTeamLeadId(null);
             setTeamLead({ id: '', name: '', role: 'Team Lead', team: '', experience: 0, salary: 0, mobile: '', email: '', address: '' });
@@ -211,7 +211,7 @@ const Admin = () => {
 
     const handleDeleteTeamLead = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/teamleads/${id}`);
+            await axios.delete(`https://taskmanagerapp-backend-9tdi.onrender.com/api/teamleads/${id}`);
             alert('Team Lead deleted successfully!');
             fetchTeamLeads();
         } catch (error) {
@@ -223,7 +223,7 @@ const Admin = () => {
     const handleBulkDeleteTeamLeads = async () => {
         if (selectedTeamLeads.length === 0) return;
         try {
-            await axios.delete('http://localhost:5000/api/teamleads', { data: { teamLeadIds: selectedTeamLeads } });
+            await axios.delete('https://taskmanagerapp-backend-9tdi.onrender.com/api/teamleads', { data: { teamLeadIds: selectedTeamLeads } });
             alert('Selected team leads deleted successfully!');
             setSelectedTeamLeads([]);
             fetchTeamLeads();
@@ -237,7 +237,7 @@ const Admin = () => {
     const handleAssignTaskSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/tasks', task);
+            await axios.post('https://taskmanagerapp-backend-9tdi.onrender.com/api/tasks', task);
             alert('Task assigned successfully!');
             setTask({ taskName: '', deadline: '', team: '', status: 'To Do', assignedTo: '' });
             fetchTasks();
@@ -251,7 +251,7 @@ const Admin = () => {
     const handleUpdateTask = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/tasks/${editingTaskId}`, task);
+            await axios.put(`https://taskmanagerapp-backend-9tdi.onrender.com/api/tasks/${editingTaskId}`, task);
             alert('Task updated successfully!');
             setEditingTaskId(null);
             setTask({ taskName: '', deadline: '', team: '', status: 'To Do', assignedTo: '' });
@@ -268,7 +268,7 @@ const Admin = () => {
             const taskToUpdate = tasks.find(t => t._id === id);
             if (taskToUpdate) {
                 const updatedTask = { ...taskToUpdate, status: newStatus };
-                await axios.put(`http://localhost:5000/api/tasks/${id}`, updatedTask);
+                await axios.put(`https://taskmanagerapp-backend-9tdi.onrender.com/api/tasks/${id}`, updatedTask);
                 alert('Task status updated successfully!');
                 fetchTasks();
             }
@@ -280,7 +280,7 @@ const Admin = () => {
 
     const handleDeleteTask = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+            await axios.delete(`https://taskmanagerapp-backend-9tdi.onrender.com/api/tasks/${id}`);
             alert('Task deleted successfully!');
             fetchTasks();
         } catch (error) {
@@ -292,7 +292,7 @@ const Admin = () => {
     const handleBulkDeleteTasks = async () => {
         if (selectedTasks.length === 0) return;
         try {
-            await axios.delete('http://localhost:5000/api/tasks', { data: { taskIds: selectedTasks } });
+            await axios.delete('https://taskmanagerapp-backend-9tdi.onrender.com/api/tasks', { data: { taskIds: selectedTasks } });
             alert('Selected tasks deleted successfully!');
             setSelectedTasks([]);
             fetchTasks();
